@@ -1,10 +1,3 @@
-window.onload = function() {
-  alert('The is not an actual e-commerce site. This is just a prototype created for skill improving purposeThis site is a demo created solely for testing and improving web development skills. It is not an actual e-commerce site and is not intended for real transactions or purchases. All content is for demonstration purposes only.');
-};
-
-
-
-
 // Initialize an empty cart
 let cart = [];
 

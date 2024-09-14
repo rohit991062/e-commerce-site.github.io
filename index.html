@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./src/css/style.css" />
+    <title>e-commerce website</title>
+  </head>
+  <body>
+    <section>
+      <div class="auth-status">
+        <div id="auth-buttons" class="signup-login">
+          <div class="offer">
+            <p>Free Shipping, 30-days return or refund guarantee.</p>
+          </div>
+          <div class="buttons">
+            <button class="sign-in"><a href="login.html">Login In</a></button>
+            <button class="sign-up"><a href="signup.html">Sign Up</a></button>
+          </div>
+        </div>
+        <div id="profile-menu" class="profile-menu">
+          <p>Free Shipping, 30-days return or refund guarantee.</p>
+          <i class="fa-solid fa-user"></i>
+          <div class="dropdown-content">  
+            <a href="#" id="sign-out-btn">Sign Out</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+      <nav class="navbar">
+        <div class="navbar-container">
+            <input type="checkbox" name="" id="checkbox">
+            <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+            <ul class="menu-items">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#sellers">Shop</a></li>
+                <li><a href="#cart" id="cart-btn">Cart</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="logo">
+                <img src="https://firebasestorage.googleapis.com/v0/b/my-ecommerce-website-7ef5a.appspot.com/o/logo.png?alt=media&token=292373ef-1981-4595-8e72-9219a0fc63f4" alt="">
+            </div>
+        </div>
+    </nav>
+
+<!-- Cart Section (Initially Hidden) -->
+<div class="cart-overlay" id="cart-overlay">
+  <div class="cart-container">
+    <!-- Cart Header -->
+    <div class="cart-header">
+      <h2>Your Cart</h2>
+      <button class="clear-cart">Clear Cart</button>
+      <button class="close-cart" id="close-cart">&times;</button>
+    </div>
+
+    <!-- Cart Items -->
+    <div class="cart-items">
+      <!-- Example Cart Item -->
+      <div class="cart-item">
+        <div class="cart-item-details">
+          <img src="https://via.placeholder.com/80" alt="Product Image" class="cart-item-image" />
+          <div class="cart-item-info">
+            <p class="cart-item-title">Product Name</p>
+            <p class="cart-item-description">Product Description</p>
+          </div>
+        </div>
+
+        <hr>
+
+        <div class="cart-item-quantity-price">
+          <div class="quantity-control">
+            <button>-</button>
+            <span>1</span>
+            <button>+</button>
+          </div>
+          <p class="cart-item-price">$29.99</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cart Total -->
+    <div class="cart-total">
+      <p>Total:</p>
+      <p>$29.99</p>
+    </div>
+
+    <!-- Checkout Button -->
+    <button class="checkout-btn"><a href="checkout.html">Proceed to Checkout</a></button>
+  </div>
+</div>
+
+
+    <section id="home">
+      <div class="home-page">
+        <div class="background"></div>
+        <div class="home-txt">
+          <h4>SUMMER COLLECTION</h4>
+          <h1>
+            FALL - WINTER <br />
+            COLLECTION 2024
+          </h1>
+          <p>
+            A specialist label creating luxury essentials. Ethnics created<br />
+            with an unwavering commitment to exceptional quality.
+          </p>
+          <button class="shop">SHOP NOW ⇾</button>
+          <div class="social-media">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-pinterest"></i>
+            <i class="fa-brands fa-instagram"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="collection">
+      <div class="collection-container">
+        <div class="content">
+          <img
+            src="https://firebasestorage.googleapis.com/v0/b/my-ecommerce-website-7ef5a.appspot.com/o/1.png?alt=media&token=222597bd-e804-4d27-8ba2-9376a8fe3297"
+            alt="img"
+          />
+          <div class="img-content">
+            <p>Clothing Collection</p>
+            <button><a href="#sellers">SHOP NOW</a></button>
+          </div>
+        </div>
+        <div class="content">
+          <img
+            src="https://firebasestorage.googleapis.com/v0/b/my-ecommerce-website-7ef5a.appspot.com/o/2-4.png?alt=media&token=f504b3a3-7435-4242-9ede-ecdb6bc9a154"
+            alt="img"
+          />
+          <div class="img-content">
+            <p>Shoes Spring</p>
+            <button><a href="#sellers">SHOP NOW</a></button>
+          </div>
+        </div>
+        <div class="content">
+          <img
+            src="https://firebasestorage.googleapis.com/v0/b/my-ecommerce-website-7ef5a.appspot.com/o/3.png?alt=media&token=c2bcca6b-947d-49eb-ba31-43d9c6493153"
+            alt="img"
+          />
+          <div class="img-content">
+            <p>Accessories</p>
+            <button><a href="#sellers">SHOP NOW</a></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sellers">
+      <div class="container seller">
+        <h2>Top Sales</h2>
+        <div class="best-seller">
+          <div
+            class="best-p1"
+            data-id="1"
+            data-name="PS England Shoes"
+            data-price="100"
+          >
+            <img src="https://firebasestorage.googleapis.com/v0/b/my-ecommerce-website-7ef5a.appspot.com/o/2-4.png?alt=media&token=f504b3a3-7435-4242-9ede-ecdb6bc9a154" alt="img1" />
+            <div class="best-p1-txt">
+              <div class="name-of-p">
+                <p>PS England Shoes</p>
+              </div>
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+              <div class="price-colors">
+                <div class="price">&#8377;100</div>
+                <div class="colors">
+                  <i class="fa-solid fa-circle" style="color: gray"></i>
+                  <i class="fa-solid fa-circle" style="color: red"></i>
+                  <i class="fa-solid fa-circle" style="color: black"></i>
+                </div>
+              </div>
+            </div>
+            <div class="buy-cart">
+              <div class="buy-now">
+                <button><a href="checkout.html">BUY NOW</a></button>
+              </div>
+              <div
+                class="add-cart"
+                onclick="addToCart('1', 'PS England Shoes', 100)"
+              >
+                <i  class="fa-solid fa-cart-shopping"></i>
+              </div>
+            </div>
+          </div>
+          <!-- Other products will follow similar structure -->
+          <div
+          class="best-p1"
+          data-id="2"
+          data-name="PS England Jackets"
+          data-price="100"
+        >
+          <img src="https://firebasestorage.googleapis.com/v0/b/my-ecommerce-website-7ef5a.appspot.com/o/5.png?alt=media&token=2087669a-68fd-44c7-b73e-def4e1e22d8b" alt="img1" />
+          <div class="best-p1-txt">
+            <div class="name-of-p">
+              <p>PS England Jackets</p>
+            </div>
+            <div class="rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+            <div class="price-colors">
+              <div class="price">&#8377;100</div>
+              <div class="colors">
+                <i class="fa-solid fa-circle" style="color: gray"></i>
+                <i class="fa-solid fa-circle" style="color: red"></i>
+                <i class="fa-solid fa-circle" style="color: black"></i>
+              </div>
+            </div>
+          </div>
+          <div class="buy-cart">
+            <div class="buy-now">
+              <button><a href="checkout.html">BUY NOW</a></button>
+            </div>
+            <div
+              class="add-cart"
+              onclick="addToCart('2', 'PS England Jackets', 100)"
+            >
+              <i  class="fa-solid fa-cart-shopping"></i>
+            </div>
+          </div>
+        </div>
+
+        <div
+            class="best-p1"
+            data-id="3"
+            data-name="PS England Shirt"
+            data-price="100"
+          >
+            <img src="https://firebasestorage.googleapis.com/v0/b/my-ecommerce-website-7ef5a.appspot.com/o/6.png?alt=media&token=ccdf90c7-536c-42aa-abae-865ad33521bd" alt="img1" />
+            <div class="best-p1-txt">
+              <div class="name-of-p">
+                <p>PS England Shirt</p>
+              </div>
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+              <div class="price-colors">
+                <div class="price">&#8377;100</div>
+                <div class="colors">
+                  <i class="fa-solid fa-circle" style="color: gray"></i>
+                  <i class="fa-solid fa-circle" style="color: red"></i>
+                  <i class="fa-solid fa-circle" style="color: black"></i>
+                </div>
+              </div>
+            </div>
+            <div class="buy-cart">
+              <div class="buy-now">
+                <button><a href="checkout.html">BUY NOW</a></button>
+              </div>
+              <div
+                class="add-cart"
+                onclick="addToCart('3', 'PS England Shirt', 100)"
+              >
+                <i  class="fa-solid fa-cart-shopping"></i>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="best-p1"
+            data-id="4"
+            data-name="PS England Shoes"
+            data-price="100"
+          >
+            <img src="https://firebasestorage.googleapis.com/v0/b/my-ecommerce-website-7ef5a.appspot.com/o/7-11-12.png?alt=media&token=7198738c-5c28-4133-a33e-76fcc8624e22" alt="img1" />
+            <div class="best-p1-txt">
+              <div class="name-of-p">
+                <p>PS England Shoes</p>
+              </div>
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+              <div class="price-colors">
+                <div class="price">&#8377;100</div>
+                <div class="colors">
+                  <i class="fa-solid fa-circle" style="color: gray"></i>
+                  <i class="fa-solid fa-circle" style="color: red"></i>
+                  <i class="fa-solid fa-circle" style="color: black"></i>
+                </div>
+              </div>
+            </div>
+            <div class="buy-cart">
+              <div class="buy-now">
+                <button><a href="checkout.html">BUY NOW</a></button>
+              </div>
+              <div
+                class="add-cart"
+                onclick="addToCart('4', 'PS England Shoes', 100)"
+              >
+                <i  class="fa-solid fa-cart-shopping"></i>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="container seller">
+        <h2>New Arrivals</h2>
+        <div class="best-seller">
+          <div
+            class="best-p1"
+            data-id="5"
+            data-name="PS England T-Shirt"
+            data-price="100"
+          >
+            <img src="https://firebasestorage.googleapis.com/v0/b/my-ecommerce-website-7ef5a.appspot.com/o/8-12.png?alt=media&token=0a4b60f0-ca31-4de1-98e5-7695939f040d" alt="img1" />
+            <div class="best-p1-txt">
+              <div class="name-of-p">
+                <p>PS England T-Shirt</p>
+              </div>
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+              <div class="price-colors">
+                <div class="price">&#8377;100</div>
+                <div class="colors">
+                  <i class="fa-solid fa-circle" style="color: gray"></i>
+                  <i class="fa-solid fa-circle" style="color: red"></i>
+                  <i class="fa-solid fa-circle" style="color: black"></i>
+                </div>
+              </div>
+            </div>
+            <div class="buy-cart">
+              <div class="buy-now">
+                <button><a href="checkout.html">BUY NOW</a></button>
+              </div>
+              <div
+                class="add-cart"
+                onclick="addToCart('5', 'PS England T-Shirt', 100)"
+              >
+                <i  class="fa-solid fa-cart-shopping"></i>
+              </div>
+            </div>
+          </div>
+          <!-- Other products will follow similar structure -->
+          <div
+          class="best-p1"
+          data-id="6"
+          data-name="PS England Bags"
+          data-price="100"
+        >
+          <img src="https://firebasestorage.googleapis.com/v0/b/my-ecommerce-website-7ef5a.appspot.com/o/9-14.png?alt=media&token=7f42f381-3215-4fe0-9929-84c1832dcf0b" alt="img1" />
+          <div class="best-p1-txt">
+            <div class="name-of-p">
+              <p>PS England Bags</p>
+            </div>
+            <div class="rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+            <div class="price-colors">
+              <div class="price">&#8377;100</div>
+              <div class="colors">
+                <i class="fa-solid fa-circle" style="color: gray"></i>
+                <i class="fa-solid fa-circle" style="color: red"></i>
+                <i class="fa-solid fa-circle" style="color: black"></i>
+              </div>
+            </div>
+          </div>
+          <div class="buy-cart">
+            <div class="buy-now">
+              <button><a href="checkout.html">BUY NOW</a></button>
+            </div>
+            <div
+              class="add-cart"
+              onclick="addToCart('6', 'PS England Bags', 100)"
+            >
+              <i  class="fa-solid fa-cart-shopping"></i>
+            </div>
+          </div>
+        </div>
+
+        <div
+            class="best-p1"
+            data-id="7"
+            data-name="PS England Specs"
+            data-price="100"
+          >
+            <img src="https://firebasestorage.googleapis.com/v0/b/my-ecommerce-website-7ef5a.appspot.com/o/10.png?alt=media&token=c565591f-0466-46cd-b70e-43f39aaac5d4" alt="img1" />
+            <div class="best-p1-txt">
+              <div class="name-of-p">
+                <p>PS England Specs</p>
+              </div>
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+              <div class="price-colors">
+                <div class="price">&#8377;100</div>
+                <div class="colors">
+                  <i class="fa-solid fa-circle" style="color: gray"></i>
+                  <i class="fa-solid fa-circle" style="color: red"></i>
+                  <i class="fa-solid fa-circle" style="color: black"></i>
+                </div>
+              </div>
+            </div>
+            <div class="buy-cart">
+              <div class="buy-now">
+                <button><a href="checkout.html">BUY NOW</a></button>
+              </div>
+              <div
+                class="add-cart"
+                onclick="addToCart('7', 'PS England Specs', 100)"
+              >
+                <i  class="fa-solid fa-cart-shopping"></i>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="best-p1"
+            data-id="8"
+            data-name="PS England Shoes"
+            data-price="100"
+          >
+            <img src="https://firebasestorage.googleapis.com/v0/b/my-ecommerce-website-7ef5a.appspot.com/o/7-11-12.png?alt=media&token=7198738c-5c28-4133-a33e-76fcc8624e22" alt="img1" />
+            <div class="best-p1-txt">
+              <div class="name-of-p">
+                <p>PS England Shoes</p>
+              </div>
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+              <div class="price-colors">
+                <div class="price">&#8377;100</div>
+                <div class="colors">
+                  <i class="fa-solid fa-circle" style="color: gray"></i>
+                  <i class="fa-solid fa-circle" style="color: red"></i>
+                  <i class="fa-solid fa-circle" style="color: black"></i>
+                </div>
+              </div>
+            </div>
+            <div class="buy-cart">
+              <div class="buy-now">
+                <button><a href="checkout.html">BUY NOW</a></button>
+              </div>
+              <div
+                class="add-cart"
+                onclick="addToCart('8', 'PS England Shoes', 100)"
+              >
+                <i  class="fa-solid fa-cart-shopping"></i>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        
+      </div>
+
+      <div class="container seller">
+      <h2>Hot Sales</h2>
+      <div class="best-seller">
+        <div
+          class="best-p1"
+          data-id="9"
+          data-name="PS England Shoes"
+          data-price="100"
+        >
+          <img src="https://firebasestorage.googleapis.com/v0/b/my-ecommerce-website-7ef5a.appspot.com/o/7-11-12.png?alt=media&token=7198738c-5c28-4133-a33e-76fcc8624e22" alt="img1" />
+          <div class="best-p1-txt">
+            <div class="name-of-p">
+              <p>PS England Shoes</p>
+            </div>
+            <div class="rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+            <div class="price-colors">
+              <div class="price">&#8377;100</div>
+              <div class="colors">
+                <i class="fa-solid fa-circle" style="color: gray"></i>
+                <i class="fa-solid fa-circle" style="color: red"></i>
+                <i class="fa-solid fa-circle" style="color: black"></i>
+              </div>
+            </div>
+          </div>
+          <div class="buy-cart">
+            <div class="buy-now">
+              <button><a href="checkout.html">BUY NOW</a></button>
+            </div>
+            <div
+              class="add-cart"
+              onclick="addToCart('9', 'PS England Shoes', 100)"
+            >
+              <i  class="fa-solid fa-cart-shopping"></i>
+            </div>
+          </div>
+        </div>
+        <!-- Other products will follow similar structure -->
+        <div
+        class="best-p1"
+        data-id="10"
+        data-name="PS England T-Shirt"
+        data-price="100"
+      >
+        <img src="https://firebasestorage.googleapis.com/v0/b/my-ecommerce-website-7ef5a.appspot.com/o/13.png?alt=media&token=bb4fbf0b-d390-4388-bf1f-006a36301fc7" alt="img1" />
+        <div class="best-p1-txt">
+          <div class="name-of-p">
+            <p>PS England T-Shirt</p>
+          </div>
+          <div class="rating">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+          </div>
+          <div class="price-colors">
+            <div class="price">&#8377;100</div>
+            <div class="colors">
+              <i class="fa-solid fa-circle" style="color: gray"></i>
+              <i class="fa-solid fa-circle" style="color: red"></i>
+              <i class="fa-solid fa-circle" style="color: black"></i>
+            </div>
+          </div>
+        </div>
+        <div class="buy-cart">
+          <div class="buy-now">
+            <button><a href="checkout.html">BUY NOW</a></button>
+          </div>
+          <div
+            class="add-cart"
+            onclick="addToCart('10', 'PS England T-Shirt', 100)"
+          >
+            <i  class="fa-solid fa-cart-shopping"></i>
+          </div>
+        </div>
+      </div>
+
+      <div
+          class="best-p1"
+          data-id="11"
+          data-name="PS England Bags"
+          data-price="100"
+        >
+          <img src="https://firebasestorage.googleapis.com/v0/b/my-ecommerce-website-7ef5a.appspot.com/o/9-14.png?alt=media&token=7f42f381-3215-4fe0-9929-84c1832dcf0b" alt="img1" />
+          <div class="best-p1-txt">
+            <div class="name-of-p">
+              <p>PS England Bags</p>
+            </div>
+            <div class="rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+            <div class="price-colors">
+              <div class="price">&#8377;100</div>
+              <div class="colors">
+                <i class="fa-solid fa-circle" style="color: gray"></i>
+                <i class="fa-solid fa-circle" style="color: red"></i>
+                <i class="fa-solid fa-circle" style="color: black"></i>
+              </div>
+            </div>
+          </div>
+          <div class="buy-cart">
+            <div class="buy-now">
+              <button><a href="checkout.html">BUY NOW</a></button>
+            </div>
+            <div
+              class="add-cart"
+              onclick="addToCart('11', 'PS England Bags', 100)"
+            >
+              <i  class="fa-solid fa-cart-shopping"></i>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="best-p1"
+          data-id="12"
+          data-name="PS England Shoes"
+          data-price="100"
+        >
+          <img src="https://firebasestorage.googleapis.com/v0/b/my-ecommerce-website-7ef5a.appspot.com/o/15.png?alt=media&token=4135e509-c199-4886-81a4-7422e91e77af" alt="img1" />
+          <div class="best-p1-txt">
+            <div class="name-of-p">
+              <p>PS England Shoes</p>
+            </div>
+            <div class="rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+            <div class="price-colors">
+              <div class="price">&#8377;100</div>
+              <div class="colors">
+                <i class="fa-solid fa-circle" style="color: gray"></i>
+                <i class="fa-solid fa-circle" style="color: red"></i>
+                <i class="fa-solid fa-circle" style="color: black"></i>
+              </div>
+            </div>
+          </div>
+          <div class="buy-cart">
+            <div class="buy-now">
+              <button><a href="checkout.html">BUY NOW</a></button>
+            </div>
+            <div
+              class="add-cart"
+              onclick="addToCart('12', 'PS England Shoes', 100)"
+            >
+              <i  class="fa-solid fa-cart-shopping"></i>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      
+    </div>
+    </section>
+
+    <footer>
+      <div class="container footer-container">
+        <div class="content_1">
+          <a href="#" class="nav-logo"><img src="https://firebasestorage.googleapis.com/v0/b/my-ecommerce-website-7ef5a.appspot.com/o/logo-1.png?alt=media&token=0fa58e27-a7bb-4232-87b9-2fc3227bb0e4" alt="logo"></a>
+          <p>
+            The customer is at the heart of our<br />unique business model,
+            which includes<br />design.
+          </p>
+          <img src="" alt="cards" />
+        </div>
+        <div class="content_2">
+          <h4>SHOPPING</h4>
+          <a href="#sellers">Clothing Store</a>
+          <a href="#sellers">Trending Shoes</a>
+          <a href="#sellers">Accessories</a>
+          <a href="#sellers">Sale</a>
+        </div>
+        <div class="content_3">
+          <h4>SHOPPING</h4>
+          <a href="./contact.html">Contact Us</a>
+          <a href="" target="_blank">Payment Method</a>
+          <a href="" target="_blank">Delivery</a>
+          <a href="" target="_blank">Return and Exchange</a>
+        </div>
+        <div class="content_4">
+          <h4>NEWLETTER</h4>
+          <p>
+            Be the first to know about new<br />arrivals, look books, sales &
+            promos!
+          </p>
+          <div class="f-mail">
+            <input type="email" placeholder="Your Email" />
+            <i class="bx bx-envelope"></i>
+          </div>
+          <hr />
+        </div>
+      </div>
+      <div class="f-design">
+        <div class="container f-design-txt">
+          <p>Design and Code by code.rohit</p>
+        </div>
+      </div>
+    </footer>
+    
+    <script>
+     $(document).ready(function () {
+      $("a").on("click", function (event) {
+        if (this.hash !== "") {
+        event.preventDefault();
+
+        var hash = this.hash;
+        $("html, body").animate(
+          {
+            scrollTop: $(hash).offset().top,
+          }, 800,
+          function () {
+          window.location.hash = hash;
+        }
+      );
+    }
+  });
+});
+
+$(".menu-items a").click(function () {
+  $("#checkbox").prop("checked", false);
+});
+    </script>
+    
+    <script>
+      // Get elements
+      const cartButton = document.getElementById('cart-btn');
+      const cartOverlay = document.getElementById('cart-overlay');
+      const closeCartButton = document.getElementById('close-cart');
+    
+      // Show cart when cart button is clicked
+      cartButton.addEventListener('click', function (event) {
+        event.preventDefault(); // Prevent default anchor behavior
+        cartOverlay.style.display = 'flex'; // Show the cart overlay
+      });
+    
+      // Hide cart when close button is clicked
+      closeCartButton.addEventListener('click', function () {
+        cartOverlay.style.display = 'none'; // Hide the cart overlay
+      });
+    
+      // Hide cart when clicking outside the cart container
+      window.addEventListener('click', function (event) {
+        if (event.target === cartOverlay) {
+          cartOverlay.style.display = 'none'; // Hide the cart overlay
+        }
+      });
+    </script>
+
+    <script type="module" src="./src/js/firebase.js"></script>
+    <script type="module" src="./src/js/auth-status.js"></script>
+
+    <script src="./src/js/main.js"></script>
+  </body>
+</html>
